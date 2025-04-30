@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp/screens/home.dart';
 import 'package:foodapp/widgets/custom_scaffold.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
@@ -163,8 +164,11 @@ class _SigninState extends State<Signin> {
                                   _formSignInKey.currentState!.value;
                               final email = formData["Email"];
                               final password = formData["Password"];
-                              // No logic added as requested
                             }
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (e) => Home()),
+                            );
                           },
                           child: const Text(
                             "Sign In",
