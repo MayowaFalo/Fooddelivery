@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/widgets/color_extension.dart';
+import 'package:foodapp/widgets/items_details.dart';
 import 'package:foodapp/widgets/menu_item_rows.dart';
 import 'package:foodapp/widgets/pop_row.dart';
 
@@ -142,7 +143,10 @@ class _MenuItemsState extends State<MenuItems> {
                     child: MenuItemRows(
                       mObj: mObj,
                       onTap: () {
-                        // TODO: Handle onTap
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (e) => ItemsDetails()),
+                        );
                       },
                     ),
                   );
